@@ -3,6 +3,8 @@
 # author:       Li Junhao           l@x-cmd.com
 # license:      GPLv3
 
+# TODO: Protecting strategy defined in ENV diff from people and teams. It should be enable to be managed by command line
+# TODO: rmrf
 ___x_cmd_rmrf(){
     local
     for i in "$@"; do
