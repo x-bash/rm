@@ -9,9 +9,12 @@
 # rm -rf @file
 # rm -rf @-
 
-# For cli
+# For cli, quick, but show
 # rm -rf    # Will Ask
 # rm show facility
+
+# ls :d.i
+# ls :d.ps
 
 ___x_cmd_rm(){
     # local opt
