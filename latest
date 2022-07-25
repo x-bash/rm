@@ -5,8 +5,11 @@
 
 # TODO:
 
+# For Function Used.
 # rm -rf @file
 # rm -rf @-
+
+# For cli
 # rm -rf    # Will Ask
 # rm show facility
 
