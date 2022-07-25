@@ -4,17 +4,23 @@
 # license:      GPLv3
 
 ___x_cmd_rm(){
-    if [ "$1" = "" ]; then
-        local i
-        x ui select i "Remove files whose name passed from stdin" yes no
-        [ "$i" != 1 ] || xargs command rm
-        return
-    fi
+    # local opt
+    # while [ "$#" -gt 0 ]; do
+    #     case "$1" in
+    #         --)     xargs command rm "$@" ;;
+    #         -*)     ;;
+    #         *)      break ;;
+    #     esac
+    #     opt="$1"
+    #     shift
+    # done
 
-    if [ "$1" = - ]; then
-        xargs command rm
-        return
-    fi
+    # if [ "$1" = "" ]; then
+    #     local i
+    #     x ui select i "Remove files whose name passed from stdin" yes no
+    #     [ "$i" != 1 ] || xargs command rm
+    #     return
+    # fi
 
     # TODO: add safely rm facility
     command rm "$@"
