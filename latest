@@ -7,9 +7,7 @@ ___x_cmd_rm(){
     if [ "$1" = "" ]; then
         local i
         x ui select i "Remove files whose name passed from stdin" yes no
-        if [ "$i" = 1 ]; then
-            xargs command rm
-        fi
+        [ "$i" != 1 ] || xargs command rm
         return
     fi
 
