@@ -3,6 +3,13 @@
 
 # license:      GPLv3
 
+# TODO:
+
+# rm -rf @file
+# rm -rf @-
+# rm -rf    # Will Ask
+# rm show facility
+
 ___x_cmd_rm(){
     # local opt
     # while [ "$#" -gt 0 ]; do
