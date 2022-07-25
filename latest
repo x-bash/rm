@@ -1,9 +1,22 @@
-# shellcheck shell=sh disable=SC3043,SC2164     # xrc
+# Author:       Li Junhao           l@x-cmd.com
+# shellcheck    shell=sh            disable=SC3043,SC2164     # xrc
 
-# author:       Li Junhao           l@x-cmd.com
 # license:      GPLv3
 
 ___x_cmd_rm(){
+    if [ "$1" = "" ]; then
+        local i
+        x ui select i "Remove files whose name passed from stdin" yes no
+        if [ "$i" = 1 ]; then
+            xargs command rm
+        fi
+        return
+    fi
+
+    if [ "$1" = - ]; then
+        xargs command rm
+        return
+    fi
 
     # TODO: add safely rm facility
     command rm "$@"
