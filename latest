@@ -6,7 +6,7 @@
 ___x_cmd_rm(){
 
     # TODO: add safely rm facility
-    rm "$@"
+    command rm "$@"
     # while [ "$#" -eq 1 ]; do
     #     :
     # fi
